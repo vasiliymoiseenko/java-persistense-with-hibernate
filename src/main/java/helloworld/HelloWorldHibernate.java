@@ -16,8 +16,8 @@ public class HelloWorldHibernate {
       //Write
       session.getTransaction().begin();
 
-      Message message = new Message();
-      message.setText("Hello World!");
+      Message message = new Message(null, "Hello");
+      //message.setText("Hello World!");
 
       session.persist(message);
 
@@ -28,7 +28,7 @@ public class HelloWorldHibernate {
       session.getTransaction().begin();
 
       message = session.createQuery("select m from Message m where m.id = 1", Message.class).getSingleResult();
-      message.setText("Take me to your leader!");
+      //message.setText("Take me to your leader!");
 
       session.getTransaction().commit();
     }

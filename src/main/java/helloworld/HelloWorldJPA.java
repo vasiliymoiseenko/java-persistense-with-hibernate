@@ -16,7 +16,7 @@ public class HelloWorldJPA {
     em.getTransaction().begin();
 
     Message message = new Message();
-    message.setText("Hello World!");
+    //message.setText("Hello World!");
 
     em.persist(message);
 
@@ -26,7 +26,7 @@ public class HelloWorldJPA {
     em.getTransaction().begin();
 
     message = em.createQuery("select m from Message m where m.id = 1", Message.class).getSingleResult();
-    message.setText("Take me to your leader!");
+    //message.setText("Take me to your leader!");
 
     em.getTransaction().commit();
 

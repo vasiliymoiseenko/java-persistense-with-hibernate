@@ -14,5 +14,8 @@
     <property name="show_sql">true</property>
     <property name="current_session_context_class">thread</property>
     <mapping class="helloworld.Message"/>
+    <mapping class="inheritance.BillingDetails"/>
+    <mapping class="inheritance.BankAccaunt"/>
+    <mapping class="inheritance.CreditCard"/>
   </session-factory>
 </hibernate-configuration>
